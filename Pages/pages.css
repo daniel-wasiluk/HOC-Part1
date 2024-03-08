@@ -1,0 +1,93 @@
+body {
+    background-color: #131316;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.page-title {
+    padding-left: 80px;
+}
+
+
+.heading-2 {
+    padding-left: 80px;
+}
+
+.paragraph-spacing {
+    padding-left: 80px;
+    padding-right: 30px;
+}
+
+.bio-image {
+    float: left;
+    width: auto; 
+    max-width: 25%;
+    height: auto;
+    margin-right: 20px; 
+    margin-bottom: 20px; 
+    padding-left: 80px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 3;
+}
+
+.navbar a {
+    position: relative;
+    margin-bottom: 20px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+    transform: scale(1.2);
+}
+
+.navbar img {
+    width: 40px;
+    height: auto;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: auto;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 110%;
+    margin-left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.navbar a:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.makebigger {
+    font-size: 30px;
+    padding: 0 80px;
+}
+
+.slightly-smaller {
+    padding-left: 150px;
+    font-size: 35px;
+}

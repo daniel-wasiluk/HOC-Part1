@@ -1,0 +1,198 @@
+.heading-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%; 
+    text-align: center;
+}
+
+
+.heading-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Images/stevie.png');
+    background-size: 300px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+    z-index: -1;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.heading-container:hover::before {
+    filter: grayscale(0%);
+}
+.section-content {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.section-image {
+    padding-left: 100px;
+    max-width: 400px; 
+    max-height: 400px; 
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.section-image:hover {
+    box-shadow: 0 0 50px 15px #ffffff21;
+}
+
+
+.first-heading {
+    z-index: 2; 
+    position: relative;
+    font-size: 100px;
+}
+
+.text-spaced {
+    padding-left: 80px;
+    padding-right: 50px;
+    font-size: 18px;
+}
+
+.header-spaced {
+    padding-left: 80px;
+}
+
+.first-heading:hover {
+animation: pastel-colors 0.5s forwards infinite;
+}
+
+@keyframes pastel-colors {
+0% { color: #ff6eff; }
+25% { color: #ffe26f; }
+50% { color: #00ff80; }
+75% { color: #5caeff; }
+100% { color: #8000ff; }
+}
+
+
+body {
+background-color: #131316;
+color: #ffffff;
+font-family: 'Poppins', sans-serif;
+padding: 0;
+margin: 0;
+}
+
+section {
+display: grid;
+place-items: center;
+align-content: center;
+min-height: 100vh;
+}
+
+.hidden {
+opacity: 0;
+filter: blur(5px);
+transform: translateX(-100%);
+transition: all 1s ease-in-out;
+}
+
+.show {
+opacity: 1;
+filter: blur(0);
+transform: translateX(0);
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 3;
+}
+
+.navbar a {
+    position: relative;
+    margin-bottom: 20px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+    transform: scale(1.2);
+}
+
+.navbar img {
+    width: 40px;
+    height: auto;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: auto;
+    background-color: #55555594;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 110%; 
+    margin-left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.navbar a:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.makebigger {
+    font-size: 30px;
+    padding: 0 80px;
+}
+
+body.dark-mode {
+    background-color: #131316;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar {
+    background-color: #222;
+}
+
+body.dark-mode .tooltip-text {
+    background-color: #333;
+    color: #ffffff;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light-mode .navbar {
+    background-color: #eee;
+}
+
+body.light-mode .tooltip-text {
+    background-color: #f5f5f5;
+    color: #000000;
+}
+
+#themeToggle:hover img {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
