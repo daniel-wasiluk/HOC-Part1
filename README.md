@@ -3,4 +3,4 @@ Our site features sections on Steve Wozniak's contributions to computer science,
 
 Sources are listed next to each paragraph.
 
-Here is the website link: [https://daniel-wasiluk.github.io/HOC-Part1/](url)
+Here is the website link: [https://daniel-wasiluk.github.io/HOC-Part1/](https://daniel-wasiluk.github.io/HOC-Part1/)
